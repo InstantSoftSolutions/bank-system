@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BankClientApp",
+    "\\BankClientApp\\src",
+    "\\BankClientApp\\src\\app",
+    "\\BankClientApp\\src\\app\\modules",
+    "\\BankClientApp\\src\\app\\modules\\account",
+    "\\BankClientApp\\src\\app\\modules\\account\\components"
+  ],
+  "PreviewInSolutionExplorer": false
+}
