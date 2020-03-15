@@ -5,8 +5,9 @@
     "\\BankClientApp\\src",
     "\\BankClientApp\\src\\app",
     "\\BankClientApp\\src\\app\\modules",
-    "\\BankClientApp\\src\\app\\modules\\account",
-    "\\BankClientApp\\src\\app\\modules\\account\\components"
+    "\\BankClientApp\\src\\app\\modules\\user",
+    "\\BankClientApp\\src\\app\\modules\\user\\components"
   ],
+  "SelectedNode": "\\BankClientApp\\src\\app\\modules\\user\\components",
   "PreviewInSolutionExplorer": false
 }

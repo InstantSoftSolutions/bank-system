@@ -6,13 +6,17 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     DashboardComponent,
     MyProfileComponent,
-    SettingsComponent
+    SettingsComponent,
+    SideMenuComponent,
+    HeaderMenuComponent
   ],
   imports: [
     SharedModule,
