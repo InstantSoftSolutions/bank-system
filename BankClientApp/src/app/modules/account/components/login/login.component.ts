@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
+import { Subscription } from 'rxjs';
+
 import { AccountService } from '../../services/account.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +15,11 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder , private accountService: AccountService) { }
+  private subscription: Subscription;
+
+  constructor(private formBuilder: FormBuilder, private accountService: AccountService) {
+    this.subscription = new Subscription();
+  }
 
   ngOnInit(): void {
     this.loginForm = this.generateLoginForm();
@@ -20,7 +27,11 @@ export class LoginComponent implements OnInit {
 
   onSignInButtonClicked(): void {
     if (this.loginForm.valid) {
-
+      this.subscription.add(this.accountService.login(this.loginForm.value).subscribe((token) => {
+        console.log(token);
+      }, (errorResponse: HttpErrorResponse) => {
+          console.log(errorResponse.message);
+      }));
     }
     else {
       this.loginForm.markAllAsTouched();
